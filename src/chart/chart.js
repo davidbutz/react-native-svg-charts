@@ -9,8 +9,8 @@ import Path from '../animated-path'
 
 class Chart extends PureComponent {
     state = {
-        width: 0,
-        height: 0,
+        height: this.props.height !== "" ? parseInt(this.props.height) : 0,
+        width: this.props.width !== "" ? parseInt(this.props.width) : 0,
     }
 
     _onLayout(event) {
